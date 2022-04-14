@@ -18,6 +18,8 @@ function soma() {
 soma += 1 
 }
 
+A abreviada é: "soma ++"
+
 // Atribua à variável `soma` todo o valor dela, multiplicando por 3, usando o operador de multiplicação abreviado.
 var soma = 15 + 8 
 soma * 3
