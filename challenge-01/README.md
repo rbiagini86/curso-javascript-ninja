@@ -48,6 +48,4 @@ x / y
 // Invoque a função criada acima, passando os parâmetros 10 e 2.
 x = 10
 y = 2
-divisao
-
-
+function divisao()
