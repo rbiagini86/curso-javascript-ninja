@@ -1,21 +1,34 @@
 # Desafio da semana #4
 
-```js
 /*
-Declare uma variável chamada `isTruthy`, e atribua a ela uma função que recebe
-um único parâmetro como argumento. Essa função deve retornar `true` se o
-equivalente booleano para o valor passado no argumento for `true`, ou `false`
-para o contrário.
+Declare uma variável chamada `isTruthy`, e atribua a ela uma função que recebe um único parâmetro como argumento. Essa função deve retornar `true` se o equivalente booleano para o valor passado no argumento for `true`, ou `false` para o contrário.
 */
-?
+var isTruthy = function(param) {
+    return !! param;
+}
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
-?
+isTruthy(false);
+isTruthy(null);
+isTruthy(undefined);
+isTruthy('');
+isTruthy(0);
+isTruthy(-0);
+isTruthy(NaN);
 
 /*
 Invoque a função criada acima passando como parâmetro 10 valores `truthy`.
 */
-?
+isTruthy(1); // número
+isTruthy('Fernando'); // string
+isTruthy([]); // array
+isTruthy({}); // objeto
+isTruthy(function() {}); // function 
+isTruthy('Curso JS Ninja'); // string
+isTruthy(20 * 30); // calculator
+isTruthy(10 + 10); // calculator
+isTruthy([1, 2, 3]); // array
+isTruthy({a: 1, b: 2}); // objeto multiplo 
 
 /*
 Declare uma variável chamada `carro`, atribuindo à ela um objeto com as
@@ -29,35 +42,71 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 - `assentos` - Number - cinco por padrão
 - `quantidadePessoas` - Number - zero por padrão
 */
-?
+// Aqui vamos criar um objeto " X = {}" 
+
+var carro = {
+    marca: 'Fiat',
+    modelo: 'Bravo',
+    placa: 'ABC-1234',
+    ano: 2013,
+    cor: 'Azul',
+    quantasPortas: 4,
+    assentos: 5,
+    quantidadePessoas: 0,
+}
 
 /*
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
 passado por parâmetro.
 */
-?
+carro.mudarCor = function(cor) {
+    carro.cor = cor;
+}
+
+carro.mudarCor('Amarelo')
+undefined
+
+// retorna a lista anterior substituindo a cor por amarelo.
 
 /*
 Crie um método chamado `obterCor`, que retorne a cor do carro.
 */
-?
+carro.obterCor = function() {
+    return carro.cor;
+}
+carro.obterCor()
+'Azul'
+
+// Ai retorna a cor do carro armazenada no banco de dados atualmente.
 
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
 */
-?
+carro.obterModelo = function() {
+    return carro.modelo;
+}
+
+carro.obterModelo()
+'Bravo'
 
 /*
 Crie um método chamado `obterMarca` que retorne a marca do carro.
 */
-?
+carro.obterMarca = function() {
+    return carro.marca;
+}
+
+carro.obterMarca()
+'Fiat'
 
 /*
 Crie um método chamado `obterMarcaModelo`, que retorne:
 "Esse carro é um [MARCA] [MODELO]"
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
-?
+carro.obterMarcaModelo = function() {
+    return 'Esse carro é um ' + carro.obterMarca() + ' ' + carro.obterModelo()';
+}
 
 /*
 Crie um método que irá adicionar pessoas no carro. Esse método terá as
@@ -85,22 +134,31 @@ retornar algum valor.
 
 Qual a cor atual do carro?
 */
-?
+'Azul'
 
 // Mude a cor do carro para vermelho.
-?
+carro.mudarCor('Vermelho')
+undefined
 
 // E agora, qual a cor do carro?
-?
+'Vermelho'
 
 // Mude a cor do carro para verde musgo.
-?
+carro.mudarCor('Verde Musgo')
+undefined
 
 // E agora, qual a cor do carro?
-?
+'Verde Musgo'
 
 // Qual a marca e modelo do carro?
-?
+carro.obterMarca()
+'Fiat'
+
+carro.obterModelo()
+'Bravo'
+
+carro.obterMarcaModelo()
+
 
 // Adicione 2 pessoas no carro.
 ?
