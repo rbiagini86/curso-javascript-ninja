@@ -215,9 +215,9 @@ pessoa.apresentacao = function() {
         idadeAnos = 'ano'
     }
 
-    return 'Olá, eu sou '+ sexo +' [NOME COMPLETO], tenho [IDADE] '+ idadeAnos +', [ALTURA], meu peso é [PESO] e, só hoje, eu já caminhei [CAMINHOU QUANTOS METROS] metros! 
+    return 'Olá, eu sou '+ sexo +' ' + pessoa.nome +' ' + pessoa.sobrenome', tenho '+ pessoa.idade' '+ idadeAnos +', '+ pessoa.altura' + , meu peso é '+ pessoa.peso' + e, só hoje, eu já caminhei '+ pessoa.caminhouQuantosMetros' + 'metros.caminhados'! 
 }
 
 // Agora, apresente-se ;)
-?
+pessoa.apresentacao();
 ```
