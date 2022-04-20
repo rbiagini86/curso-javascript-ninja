@@ -124,7 +124,10 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
-?
+
+carro.adicionarPessoas = function(numeroPessoas) {
+    return 'Já temos ' + carro.quantidadePessoas + 'pessoas no carro.'
+}
 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
@@ -161,20 +164,21 @@ carro.obterMarcaModelo()
 
 
 // Adicione 2 pessoas no carro.
-?
+adicionarPessoas(2)
 
 // Adicione mais 4 pessoas no carro.
-?
+adicionarPessoas(4)
 
 // Faça o carro encher.
-?
+adicionarPessoas(-1)
 
 // Tire 4 pessoas do carro.
-?
+adicionarPessoas(-4)
 
 // Adicione 10 pessoas no carro.
-?
+adicionarPessoas(10)
 
 // Quantas pessoas temos no carro?
-?
+carro.quantidadePessoas()
+'11'
 ```
