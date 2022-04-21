@@ -2,7 +2,7 @@
 
 ```js
 // Declarar uma variável qualquer, que receba um objeto vazio.
-var objeto = {}; GGGG
+var objeto = {}; GGGG VINICIUS
 
 /*
 Declarar uma variável `pessoa`, que receba suas informações pessoais.
