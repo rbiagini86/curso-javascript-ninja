@@ -3,32 +3,21 @@ Crie uma variável qualquer, que receba um array com alguns valores aleatórios
 - ao menos 5 - (fica por sua conta os valores do array).
 */
 // 
-var teste = [1, 2, 3, 4, 5]
-
-// return array é usado o colchete ([]) e para objeto é chave ({})
+    var myarray = [10, 'Daciuk', null, {a: 1}, function() {}];
 
 /*
 Crie uma função que receba um array como parâmetro, e retorne esse array.
 */
 // 
-function myFunction() {
-    return [1, 2, 3];
-    }
-
-function myFunction() {
-    return {
-    prop1: 'fernando',
-    prop2: function() {
-        return 'prop3';
-        }
-    }
+function myFunction(arr) {
+    return arr;
 }
 
 /*
 Imprima o segundo índice do array retornado pela função criada acima.
 */
-// 
-?
+
+console.log( myFunction( myarray )[1] );
 
 /*
 Crie uma função que receba dois parâmetros: o primeiro, um array de valores; e o
@@ -37,20 +26,27 @@ no primeiro parâmetro. O índice usado para retornar o valor, deve ser o númer
 segundo parâmetro.
 */
 // 
-?
+function myFunction2(arr, index) {
+    return arr [ index ];
+}
 
 /*
 Declare uma variável que recebe um array com 5 valores, de tipos diferentes.
 */
 // 
-?
+var myarray2 = ['Ninja', 52.4, true, ['Um', '2', 'Daciuk'], {b: 2}];
 
 /*
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
 array criado.
 */
 // 
-?
+console.log( myFunction2( myarray2)[0]);
+console.log( myFunction2( myarray2)[1]);
+console.log( myFunction2( myarray2)[2]);
+console.log( myFunction2( myarray2)[3]);
+console.log( myFunction2( myarray2)[4]);
+
 
 /*
 Crie uma função chamada `book`, que recebe um parâmetro, que será o nome do
@@ -67,7 +63,51 @@ propriedades:
 os livros.
 */
 // 
-?
+
+function book(bookName) {
+    var allBooks = {
+        'Segredos do Ninja Javascript': {
+        quantidadePaginas: 488,
+        autor: 'John Resing & Bear Bibeault',
+        editora: 'Novatec'
+        
+        },
+        'Introdução ao HTML5': {
+        quantidadePaginas: 220,
+        autor: 'Bruce Lawson & Remy Sharp',
+        editora: 'Alta Book'
+        
+        },
+        'Smashing CSS': {
+        quantidadePaginas: 283,
+        autor: 'Erick A. Meyer',
+        editora: 'Bookman'
+        
+        },
+    };
+}
+
+return allBooks.bookName;
+
+var arr = [ 1, 2, 3 ];
+
+// transformando esse array em objeto o resultado é o mesmo que dizer: 
+
+var arr = {
+    "0": 1,
+    "1": 2,
+    "2": 3
+};
+
+// Nesse caso o correto é: 
+
+if( !bookName ) {
+    return allBooks;
+};
+
+return allBooks[ bookName ];
+
+return !bookName ? allBooks : allBooks[ bookName ];
 
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
