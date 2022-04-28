@@ -5,7 +5,8 @@ Declare uma variável chamada `championship` que receberá o nome do campeonato,
 e imprima o nome desse campeonato no console.
 */
 // 
-?
+var championship = 'lampionsLeague';
+championship
 
 /*
 Declare uma variável chamada `teams`, que receberá um array com 5 elementos.
@@ -14,7 +15,7 @@ estar na ordem em que eles aparecem na tabela no momento da solução desse
 desafio.
 */
 // 
-?
+var teams = array(); { 1, 2, 3, 4};
 
 console.log( 'Times que estão participando do campeonato:', teams );
 
