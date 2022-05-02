@@ -31,7 +31,7 @@
         
         console.log( 'A soma de 10 e 20 é igual a', sum ? sum() : undefined );
         return sum();
-    }
+    } 
     
     myFunction2();
     
