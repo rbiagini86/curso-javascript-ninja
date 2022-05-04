@@ -14,7 +14,12 @@
     */
     // 
     
-    ?
+    var person = {
+        name: 'Rodrigo',
+        lastname: 'Biagini',
+        age: 36
+    }
+
     console.log( 'Propriedades de "person":' );
 
     /*
@@ -23,14 +28,14 @@
     */
     // 
     
-    ?
+    console.log(person);
 
     /*
     Crie um array vazio chamado `books`.
     */
     // 
     
-    ?
+    var book = [];
 
     /*
     Adicione nesse array 3 objetos, que serão 3 livros. Cada livro deve ter a
@@ -38,17 +43,35 @@
     `name`: String
     `pages`: Number
     */
-    // 
+    //
+
+    livro1 = {
+        name: 'livro1',
+        pages: 100
+    }
+
+    livro2 = {
+        name: 'livro2',
+        pages: 200
+    }
     
-    ?
-    console.log( '\nLista de livros:' );
+    livro3 = {
+        name: 'livro3',
+        pages: 50
+    }
+
+    book.push(livro1)
+    book.push(livro2)
+    book.push(livro3)
+
+    console.log( '\nLista de livros:' + book + '.' );
 
     /*
     Mostre no console todos os livros.
     */
     // 
     
-    ?
+    book
 
     console.log( '\nLivro que está sendo removido:' );
     /*
@@ -56,30 +79,30 @@
     */
     // 
     
-    ?
+    book.pop(livro3)
 
-    console.log( '\nAgora sobraram somente os livros:' );
+    console.log( '\nAgora sobraram somente os livros:' + book + '.');
     /*
     Mostre no console os livros restantes.
     */
     // 
     
-    ?
+    book
 
     /*
     Converta os objetos que ficaram em `books` para strings.
     */
     // 
     
-    ?
-    console.log( '\nLivros em formato string:' );
+    book.join()
+    console.log( '\nLivros em formato string:' + book + '.' );
 
     /*
     Mostre os livros nesse formato no console:
     */
     // 
     
-    ?
+    book
 
     /*
     Converta os livros novamente para objeto.
