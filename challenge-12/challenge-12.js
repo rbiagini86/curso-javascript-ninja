@@ -102,7 +102,7 @@
     */
     // 
     
-    book
+    book 
 
     /*
     Converta os livros novamente para objeto.
