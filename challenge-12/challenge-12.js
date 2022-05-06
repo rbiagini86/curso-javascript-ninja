@@ -1,4 +1,4 @@
-(function() {
+;(function() {
 
     /*
     Envolva todo o conteúdo desse arquivo em uma IIFE.
@@ -19,7 +19,6 @@
         lastname: 'Biagini',
         age: 36
     }
-
     console.log( 'Propriedades de "person":' );
 
     /*
@@ -28,14 +27,14 @@
     */
     // 
     
-    console.log(person);
+    console.log( Object.keys( person ) ) ;
 
     /*
     Crie um array vazio chamado `books`.
     */
     // 
     
-    var book = [];
+    var books = [];
 
     /*
     Adicione nesse array 3 objetos, que serão 3 livros. Cada livro deve ter a
@@ -44,6 +43,10 @@
     `pages`: Number
     */
     //
+
+    books.push( { name: 'livro1', pages: 250 } ) ;
+    books.push( { name: 'livro2', pages: 300 } ) ;
+    books.push( { name: 'livro3', pages: 100 } ) ;
 
     livro1 = {
         name: 'livro1',
@@ -71,7 +74,7 @@
     */
     // 
     
-    book
+    console.log(books);
 
     console.log( '\nLivro que está sendo removido:' );
     /*
@@ -79,7 +82,7 @@
     */
     // 
     
-    book.pop(livro3)
+    console.log( books.pop() ) ;
 
     console.log( '\nAgora sobraram somente os livros:' + book + '.');
     /*
@@ -87,14 +90,14 @@
     */
     // 
     
-    book
+    console.log(books);
 
     /*
     Converta os objetos que ficaram em `books` para strings.
     */
     // 
     
-    book.join()
+    books = JSON.stringify( books );
     console.log( '\nLivros em formato string:' + book + '.' );
 
     /*
@@ -102,16 +105,17 @@
     */
     // 
     
-    book 
+    console.log( books ) ; 
 
     /*
     Converta os livros novamente para objeto.
     */
     // 
     
-    ?
+    books = JSON.parse( books ) ;
+    console.log( books ) ;
     console.log( '\nAgora os livros são objetos novamente:' );
-
+    
     /*
     Mostre no console todas as propriedades e valores de todos os livros,
     no formato abaixo:
@@ -119,7 +123,12 @@
     */
     // 
     
-    ? 
+    for( var i = 0; i < Object.keys( books ).length; i++ ) {
+        console.log( books[1].name, books[i].pages ) ;
+        for( var prop in books[i] ) {
+            console.log( prop + ' : ' + books[i][prop] ) ;
+        }
+    }
 
     /*
     Crie um array chamado `myName`. Cada item desse array deve ser uma letra do
@@ -127,7 +136,7 @@
     */
     // 
     
-    ?
+    var myName = ['R', 'o', 'd', 'r', 'i', 'g', 'o' ] ;
     console.log( '\nMeu nome é:' );
 
     /*
@@ -135,7 +144,7 @@
     */
     // 
     
-    ?
+    console.log(myName.reverse().join( ' ' ) ) ;
 
     console.log( '\nMeu nome invertido é:' );
 
@@ -144,7 +153,7 @@
     */
     // 
     
-    ?
+    console.log(myName.reverse().join( ' ' ) ) ;
 
     console.log( '\nAgora em ordem alfabética:' );
     /*
@@ -152,6 +161,6 @@
     */
     // 
     
-    ?
+    console.log( myName().sort() ) ;
 
-})
+})();
