@@ -12,9 +12,11 @@
     Mostre esse array no console.
     */
     console.log( 'Number Objects Array:' );
-    // 
-    
-    ?
+    var numberObjects = [];
+    for(var i = 1; i <= 10; i++) {
+        numberObjects.push({number: i});
+    }
+    console.log(numberObjects);
 
     /*
     Crie um array chamado `justNumbers`, que terá como elementos somente os
@@ -23,7 +25,10 @@
     console.log( '\nJust Numbers:' );
     // 
     
-    ?
+    var justNumbers = numberObjects.map(function(item) {
+        return item.number;
+    });
+    console.log(justNumbers);
 
     /*
     Crie um novo array chamado `justMod2Or3`, que receberá do array criado acima
@@ -31,9 +36,11 @@
     no console.
     */
     console.log( '\nJust module of division by 2 or 3:' );
-    // 
-    
-    ?
+    var justMod2Or3 = justNumbers.filter(function(item) {
+        if(item % 2 === 0 || item % 3 === 0);
+            return item;
+    });
+    console.log(justMod2Or3);
 
     /*
     Declare uma variável chamada operation que receba, do array criado acima,
@@ -44,9 +51,11 @@
     Mostre o resultado no console.
     */
     console.log( '\nOperation:' );
-    // 
-    
-    ?
+    var operation = justMod2Or3.reduce(function(acumulado, atual, index) {
+        return (acumulado + 1) * atual;
+    }); 0;
+
+    console.log(operation);
 
     /*
     Faça o mesmo cálculo passado acima, mas começando do último item para o
@@ -54,9 +63,10 @@
     console.
     */
     console.log( '\nOperation 2:' );
-    // 
-    
-    ?
+    var operation2 = justMod2Or3.reduceRight(function(acumulado, atual) {
+        return (acumulado + 1) * atual;
+    }) 0;
+    console.log(operation2);
 
     /*
     Crie um array chamado `name`. Cada elemento desse array deve ser uma sílaba
@@ -124,6 +134,8 @@
 
 //////////////////////////////////////////////////////////////////////////////////////
 
+'FUNCTIONS' reduce(); + reduceRight();
+
 var arr = [1, 2, 3, 4, 5];
 var reduce = arr.reduce(function(acumulado, atual, index, array) {
     return acumulado + atual;
@@ -152,19 +164,49 @@ var reduce = arr.reduce(function(acumulado, atual, index, array) {
 });
 console.log(reduce);
 
+/*
+
+Aqui temos o reduce() e o reduceRight() para fazer a mesma coisa, apenas mudando a ordem
+de esquerda para a direita ou de direita para a esquerda. 
+
+Se a gente usa isso na strig do nome acima vamos ter o nome invertido, enquanto que se fizer
+para a soma de números vai mudar a ordem, porém, não o resultado. 
+
+*/
+
+var arr = ["R", "o", "d", "r", "i", "g", "o"];
+var reduce = arr.reduceRight(function(acumulado, atual, index, array) {
+    return acumulado + atual;
+});
+console.log(reduce);
+
 //////////////////////////////////////////////////////////////////////////////////////
 
+'Function' indexOf() e lastIndexOf();
+
+var arr = [1, 2, 3, 4, 5];
+console.log(arr.indexOf(6));
+console.log(arr.indexOf(3));
+
+/*
+
+Nesse caso o indexOf() gera uma busca, dentro do array apontado, informando qual a 
+posição que você acha aquele index passado dentro do parêntese. 
+Caso não encontre o índice vai dar um resultado de -1 
+
+Ao passarmos um segundo parámetro, vamos dizer onde você quer que ele ache aquele índice
+buscado na pesquisa. 
+
+O lastIndexOf() faz a mesma coisa do returnRight() fazendo a busca do final do array para 
+o início dele, ao contrário do indexOf() puro. 
+
+*/
+
+var arr = ["R", "o", "d", "r", "i", "g", "o"];
+
+var index = arr.lastIndexOf('i', 2)
+
+console.log(arr.lastIndexOf('k'));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+//////////////////////////////////////////////////////////////////////////////////////
