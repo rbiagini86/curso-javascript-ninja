@@ -90,7 +90,7 @@
     console.log( '\nInversed Name:' );
     // 
     
-    ?
+    ? 
 
     /*
     Mostre no console o array `numberObjects`.
